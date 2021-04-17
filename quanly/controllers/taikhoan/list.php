@@ -1,0 +1,48 @@
+<?php
+$db = new Account;
+
+if(isset($_POST['delete-bt'])==true){	
+	$arrid = $_POST["arrid"];
+	$n = count($arrid);
+	for($i=0;$i<$n;$i++){
+		$db->delete_tai_khoan($arrid[$i]);
+	}
+}
+
+if(isset($_GET['num'])==true){
+	$num = $_GET['num'];
+}else{
+	$num = 1;
+}
+
+if(isset($_GET['id_type'])==true){
+	$id_type = $_GET["id_type"];
+}else{
+	$id_type = '';
+}
+if(isset($_GET['active'])==true){
+	$active = $_GET["active"];
+}else{
+	$active = '';
+}
+
+if(isset($_POST['search-bt'])==true){
+	$search = $_POST["search"];
+}else{
+	$search = '';
+}
+
+if(strlen($search)>0){
+	$array = $db->get_list_tai_khoan($id_type,$active,0,0);
+	$sum = 0;
+}else{
+	$row_sum = $db->count_list_tai_khoan($id_type,$active);
+	$sum = $row_sum['TotalID'];
+	$limit = 14;
+	$pages = (($sum%$limit)==0)?$sum/$limit:floor($sum/$limit)+1;
+	$start = ($num-1)*$limit;
+	$array = $db->get_list_tai_khoan($id_type,$active,$start,$limit);
+}
+
+require_once("views/taikhoan/list.php");
+unset($db);

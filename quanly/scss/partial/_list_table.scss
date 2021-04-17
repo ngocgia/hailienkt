@@ -1,0 +1,856 @@
+.main-table{
+    position: relative;
+    z-index: 49;
+    padding-right:5px;
+    .inner-main-table{
+        overflow:auto;
+        table{
+            table-layout: fixed;
+            max-width: none;
+            width: auto;
+            min-width: 100%;
+            tr{
+                border-bottom:1px solid #efefef;
+                &:first-child{
+                    background-color: #dcf4fc !important;
+                    border:1px solid #c5e7f2;
+                    td{
+                        padding:5px;
+                        border-right:1px solid #c5e7f2;
+                        font-weight: bold;
+                        font-size: 15px;
+                        font-family: lato;
+                    }
+                }
+                &:nth-child(odd){
+                    background-color:#f9f9f9;
+                }
+                &:nth-child(even){
+                    background-color:#fff;
+                }
+                td{
+                    padding:5px;
+                    font-size:15px;
+                    border-right:1px solid #efefef;
+                    img{
+                        margin:0 auto;
+                        max-width:50px;
+                        max-height:50px;
+                    }
+                    &:first-child{
+                        text-align:center;
+                        min-width:50px;
+                        a{
+                            display:block;
+                            color:#4bac4d;
+                            padding: 10px 12px;
+                            white-space: nowrap;
+                            cursor:pointer;
+                            text-decoration:none;
+                            &:hover{
+                                text-decoration:none;
+                            }
+                            > div{
+                                display:inline-block;
+                                width:12px;
+                                height:12px;
+                                border:1px solid #4bac4d;
+                                border-radius:2px;
+                                position:relative;
+                                font-size:16px;
+                                i{
+                                    display:none;
+                                    position:absolute;
+                                    top: -3px;
+                                    left: -1px;
+                                }
+                            }
+                            > i{
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        text-align:center;
+                        min-width:50px;
+                    }
+                    &:nth-child(3){
+                        min-width:220px;
+                    }
+                    &:nth-child(4){
+                        min-width:150px;
+                    }
+                    &:nth-child(5){
+                        min-width:100px;
+                    }
+                    &:nth-child(6){
+                        min-width:250px;
+                    }
+                    &:nth-child(7){
+                        min-width:250px;
+                    }
+                    &:nth-child(8){
+                        min-width:100px;
+                    }
+                    &:nth-child(9){
+                        min-width:100px;
+                    }
+                    &:nth-child(10){
+                        min-width:100px;
+                    }
+                    &:nth-child(11){
+                        min-width:100px;
+                    }
+                    &:last-child{
+                        text-align:center;
+                        min-width:150px;
+                        ul{
+                            li{
+                                float:left;
+                                width:33%;
+                                &:last-child{
+                                    a{
+                                        i.icon-checkmark{
+                                            color:#989898;
+                                        }
+                                    }
+                                }
+                                a{
+                                    white-space: nowrap;
+                                    text-decoration: none;
+                                    color:#222222;
+                                    display:block;
+                                    padding: 8px 10px 6px;
+                                    position:relative;
+                                    text-align:center;
+                                    font-size:16px;
+                                    &:hover{
+                                        
+                                    }
+                                    i{
+                                        display:inline-block;
+                                    }
+                                    i.icon-file-text{
+                                        color:#844b4b;
+                                    }
+                                    i.fa-gear{
+                                        color:#353535;
+                                    }
+                                    i.icon-bin2{
+                                        color:#ff3f3f;
+                                    }
+                                    i.icon-spinner9{
+                                        color:#4666ff;
+                                    }
+                                    i.icon-checkmark{
+                                        color:#4bac4d;
+                                    }
+                                    i.fa-lock{
+                                        color:#989898;
+                                        font-size:20px;
+                                    }
+                                    i.fa-unlock{
+                                        color:#4bac4d;
+                                        font-size:20px;
+                                    }
+                                    i.icon-cross{
+                                        color:#989898;
+                                    }
+                                }
+                                &:nth-child(1){
+                                    > a{
+                                        >i{
+                                            transform-origin:left bottom;
+                                            transition:transform 0.2s;
+                                            &.menu-hover-1{
+                                                transform:rotateZ(-30deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(2){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-2{
+                                                transform:rotateZ(90deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(3){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-3{
+                                                transform:rotateZ(30deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(4){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-4{
+                                                transform:rotateZ(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(5){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.4s;
+                                            &.menu-hover-5{
+                                                transform:rotateY(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(6){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-6{
+                                                transform:rotateY(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(7){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-7{
+                                                transform:rotateY(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-child(8){
+                                    > a{
+                                        >i{
+                                            transition:transform 0.2s;
+                                            &.menu-hover-8{
+                                                transform:rotateY(180deg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &::after{
+                                display:table;
+                                content:"";
+                                clear:both;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    background-color:#e6f5d6;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (min-width:480px){
+    .main-table{
+        .inner-main-table{
+            table{
+                tr{
+                    &:first-child{
+                        td{
+
+                        }
+                    }
+                    &:nth-child(odd){
+
+                    }
+                    &:nth-child(even){
+
+                    }
+                    td{
+                        img{
+
+                        }
+                        &:first-child{
+                            a{
+                                &:hover{
+                                    
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+
+                        }
+                        &:nth-child(3){
+
+                        }
+                        &:nth-child(4){
+
+                        }
+                        &:nth-child(5){
+
+                        }
+                        &:nth-child(6){
+
+                        }
+                        &:nth-child(7){
+
+                        }
+                        &:last-child{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+
+                                        }
+                                        i{
+
+                                        }
+                                        i.icon-pencil{
+
+                                        }
+                                        i.icon-cogs{
+
+                                        }
+                                        i.icon-bin2{
+
+                                        }
+                                        i.icon-spinner9{
+
+                                        }
+                                        i.icon-checkmark{
+
+                                        }
+                                        i.icon-cross{
+
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-1{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-2{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-3{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-4{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(5){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-5{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-6{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .main-table{
+        padding-right: 10px;
+        .inner-main-table{
+            table{
+                tr{
+                    &:first-child{
+                        td{
+
+                        }
+                    }
+                    &:nth-child(odd){
+
+                    }
+                    &:nth-child(even){
+
+                    }
+                    td{
+                        img{
+
+                        }
+                        &:first-child{
+                            a{
+                                &:hover{
+                                    
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+
+                        }
+                        &:nth-child(3){
+
+                        }
+                        &:nth-child(4){
+
+                        }
+                        &:nth-child(5){
+
+                        }
+                        &:nth-child(6){
+
+                        }
+                        &:nth-child(7){
+
+                        }
+                        &:last-child{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+
+                                        }
+                                        i{
+
+                                        }
+                                        i.icon-pencil{
+
+                                        }
+                                        i.icon-cogs{
+
+                                        }
+                                        i.icon-bin2{
+
+                                        }
+                                        i.icon-spinner9{
+
+                                        }
+                                        i.icon-checkmark{
+
+                                        }
+                                        i.icon-cross{
+
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-1{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-2{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-3{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-4{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(5){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-5{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-6{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .main-table{
+        padding-right: 15px;
+        .inner-main-table{
+            table{
+                tr{
+                    &:first-child{
+                        td{
+
+                        }
+                    }
+                    &:nth-child(odd){
+
+                    }
+                    &:nth-child(even){
+
+                    }
+                    td{
+                        img{
+
+                        }
+                        &:first-child{
+                            a{
+                                &:hover{
+                                    
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+
+                        }
+                        &:nth-child(3){
+
+                        }
+                        &:nth-child(4){
+
+                        }
+                        &:nth-child(5){
+
+                        }
+                        &:nth-child(6){
+
+                        }
+                        &:nth-child(7){
+
+                        }
+                        &:last-child{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+
+                                        }
+                                        i{
+
+                                        }
+                                        i.icon-pencil{
+
+                                        }
+                                        i.icon-cogs{
+
+                                        }
+                                        i.icon-bin2{
+
+                                        }
+                                        i.icon-spinner9{
+
+                                        }
+                                        i.icon-checkmark{
+
+                                        }
+                                        i.icon-cross{
+
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-1{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-2{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-3{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-4{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(5){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-5{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-6{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .main-table{
+        .inner-main-table{
+            table{
+                tr{
+                    &:first-child{
+                        td{
+
+                        }
+                    }
+                    &:nth-child(odd){
+
+                    }
+                    &:nth-child(even){
+
+                    }
+                    td{
+                        img{
+
+                        }
+                        &:first-child{
+                            a{
+                                &:hover{
+                                    
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                        &:nth-child(2){
+
+                        }
+                        &:nth-child(3){
+
+                        }
+                        &:nth-child(4){
+
+                        }
+                        &:nth-child(5){
+
+                        }
+                        &:nth-child(6){
+
+                        }
+                        &:nth-child(7){
+
+                        }
+                        &:last-child{
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+
+                                        }
+                                        i{
+
+                                        }
+                                        i.icon-pencil{
+
+                                        }
+                                        i.icon-cogs{
+
+                                        }
+                                        i.icon-bin2{
+
+                                        }
+                                        i.icon-spinner9{
+
+                                        }
+                                        i.icon-checkmark{
+
+                                        }
+                                        i.icon-cross{
+
+                                        }
+                                    }
+                                    &:nth-child(1){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-1{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(2){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-2{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-3{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-4{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(5){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-5{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(6){
+                                        > a{
+                                            >i{
+                                                &.menu-hover-6{
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+
+                    }
+                }
+
+            }
+        }
+    }
+}

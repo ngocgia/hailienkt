@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'utm_altergothic';
+    src: url('UTMAlterGothic.eot');
+    src: url('UTMAlterGothic.eot?#iefix') format('embedded-opentype'),
+         url('UTMAlterGothic.woff') format('woff'),
+         url('UTMAlterGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

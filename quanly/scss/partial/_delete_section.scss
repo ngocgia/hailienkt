@@ -1,0 +1,141 @@
+.delete-section{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background:#fdfdfdeb;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 0 35px #afafaf;
+    border-radius:3px;
+    p{
+        color:#3a3a3a;
+        font-size: 17px;
+        margin-bottom: 15px;
+        font-family: arial;
+    }
+    div{
+        display:table;
+        margin:0 auto;
+        a, button{
+            white-space: nowrap;
+            text-decoration: none;
+            font-size:16px;
+            font-family: exo;
+            color:#dedede;
+            display:block;
+            padding:5px 7px;
+            float:left;
+            margin-left:10px;
+            text-align:center;
+            &:hover{
+                text-decoration:none;
+            }
+            i{
+                font-size:13px;
+            }
+        }
+        a{
+            background-color:#0da51f;
+            border-radius:5px;
+            &:hover{
+                background-color:#0a8419;
+            }
+        }
+        button{
+            background-color:#c51515;
+            border-radius:5px;
+            border:none;
+            outline:none;
+            &:focus{
+                outline:none;
+            }
+            &:hover{
+                background-color:#ad1313;
+            }
+        }
+        &:after{
+            display:table;
+            clear:both;
+            content:"";
+        }
+    }
+}
+@media (min-width:480px){
+    .delete-section{
+        p{
+
+        }
+        div{
+            a, button{
+                &:hover{
+
+                }
+            }
+            button{
+                &:focus{
+
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .delete-section{
+        padding:20px;
+        p{
+
+        }
+        div{
+            a, button{
+                &:hover{
+
+                }
+            }
+            button{
+                &:focus{
+
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .delete-section{
+        padding:15px 30px;
+        p{
+
+        }
+        div{
+            a, button{
+                &:hover{
+
+                }
+            }
+            button{
+                &:focus{
+
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .delete-section{
+        p{
+
+        }
+        div{
+            a, button{
+                &:hover{
+
+                }
+            }
+            button{
+                &:focus{
+
+                }
+            }
+        }
+    }
+}

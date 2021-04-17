@@ -1,0 +1,53 @@
+/*@media (min-width:480px){
+    
+}
+@media (min-width:768px){
+    
+}
+@media (min-width:992px){
+    
+}
+@media (min-width:1200px){
+    
+}*/
+
+@mixin mediaMinWidth($w){
+    @media (min-width: $w){
+        @content;
+    }
+}
+
+@keyframes sidebar1open {
+   35%{transform:translate(0,7px);}
+   100%{transform:translate(0,7px) rotate(45deg);}
+}
+
+@keyframes sidebar3open {
+   35%{transform:translate(0,-7px);}
+   100%{transform:translate(0,-7px) rotate(-45deg);}
+}
+
+@keyframes sidebar1close {
+   0%{transform:translate(0,7px) rotate(45deg);}
+   35%{transform:translate(0,7px) rotate(0deg);}
+   100%{transform:translate(0,0px) rotate(0deg);}
+}
+
+@keyframes sidebar3close {
+   0%{transform:translate(0,-7px) rotate(-45deg);}
+   35%{transform:translate(0,-7px) rotate(0deg);}
+   100%{transform: translate(0,0px) rotate(0deg)}
+}
+
+.ink {
+    display: block; position: absolute;
+    background-color:rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.5s linear;}
+@keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {opacity: 0; transform: scale(2.5);}
+}

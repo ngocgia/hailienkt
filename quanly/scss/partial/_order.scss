@@ -1,0 +1,650 @@
+.main{
+    .main-content{
+        transition:padding-left 0.4s;
+        padding-left:5px;
+        padding-top:15px;
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+}
+
+
+.main-header{
+    position: relative;
+    z-index: 50;
+    .main-header-name{
+        padding:15px 0;
+        h2{
+            text-align:center;
+            color:#333;
+            font-size:22px;
+            margin:0;
+            font-weight:bold;
+        }
+    }
+    .main-header-button{
+        display:table;
+        margin:0 auto;
+        padding:0 15px 20px 0;
+        > div {
+            float:left;
+            margin-left: 15px;
+            > a{
+                display:block;
+                color:#fff;
+                background-color:#3b637d;
+                padding:6px 10px;
+                font-size:14px;
+                cursor:pointer;
+                text-decoration:none;
+                i:first-of-type{
+                    margin-right:7px;
+                }
+                i.fa-angle-down{
+                    margin-left:7px;
+                }
+                &:hover{
+                    text-decoration:none;
+                    background-color:#375b73;
+                }
+
+
+            }
+        }
+        > div.main-header-handle{
+            position:relative;
+            display:none;
+            > a.main-button-handle{
+
+            }
+            > div.main-handle-box{
+                position:absolute;
+                top:100%;
+                left:0;
+                background-color:#3b637d;
+                display:none;
+                ul{
+                    padding:5px 0;
+                    li{
+                        a{
+                            display:block;
+                            color:#fff;
+                            padding: 10px 12px;
+                            white-space: nowrap;
+                            cursor:pointer;
+                            text-decoration:none;
+                            &:hover{
+                                text-decoration:none;
+                                background-color:#375b73;
+                            }
+                            i{
+                                margin-right:7px;
+                            }
+                        }
+                        button{
+                            text-align:left;
+                            display:block;
+                            color:#fff;
+                            padding: 10px 12px;
+                            white-space: nowrap;
+                            cursor:pointer;
+                            text-decoration:none;
+                            border:none;
+                            background:none;
+                            outline:none;
+                            width:100%;
+                            &:focus{
+                                outline:none;
+                                background:none;
+                            }
+                            &:hover{
+                                text-decoration:none;
+                                background-color:#375b73;
+                            }
+                            i{
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > div.main-header-add{
+            position:relative;
+            > a.main-button-add{
+
+            }
+            > div.main-add-box{
+                position:absolute;
+                top:100%;
+                left:0;
+                background-color:#3b637d;
+                display:none;
+                ul{
+                    padding:5px 0;
+                    li{
+                        a{
+                            display:block;
+                            color:#fff;
+                            padding: 10px 12px;
+                            white-space: nowrap;
+                            cursor:pointer;
+                            text-decoration:none;
+                            &:hover{
+                                text-decoration:none;
+                                background-color:#375b73;
+                            }
+                            i{
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > div.main-header-import{
+            display:none;
+            > a.main-button-import{
+
+            }
+        }
+        > div.main-header-export{
+            display:none;
+            > a.main-button-export{
+
+            }
+        }
+        > div.main-header-option{
+            position:relative;
+            > a.main-button-option{
+                i.fa-angle-down{
+                    margin-left:0;
+                }
+            }
+            > div.main-option-box{
+                position:absolute;
+                top:100%;
+                right:0;
+                background-color:#3b637d;
+                display:none;
+                ul{
+                    padding:5px 0;
+                    li{
+                        a{
+                            display:block;
+                            color:#fff;
+                            padding: 10px 12px;
+                            white-space: nowrap;
+                            cursor:pointer;
+                            text-decoration:none;
+                            &:hover{
+                                text-decoration:none;
+                                background-color:#375b73;
+                            }
+                            > div{
+                                display:inline-block;
+                                width:12px;
+                                height:12px;
+                                border:1px solid #fff;
+                                border-radius:2px;
+                                margin-right:10px;
+                                position:relative;
+                                font-size:16px;
+                                transform: translate(0,1px);
+                                i{
+                                    display:none;
+                                    position:absolute;
+                                    top: -3px;
+                                    left: -1px;
+                                }
+                            }
+                            > i{
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+    &::after{
+        display:table;
+        content:"";
+        clear:both;
+    }
+}
+
+@media (min-width:480px){
+    .main-header{
+        .main-header-name{
+            h2{
+
+            }
+        }
+        .main-header-button{
+            > div {
+                > a{
+                    i:first-of-type{
+
+                    }
+                    i.fa-angle-down{
+
+                    }
+                    &:hover{
+
+                    }
+
+
+                }
+            }
+            > div.main-header-handle{
+                > a.main-button-handle{
+
+                }
+                > div.main-handle-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-add{
+                > a.main-button-add{
+
+                }
+                > div.main-add-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-import{
+                > a.main-button-import{
+
+                }
+            }
+            > div.main-header-export{
+                > a.main-button-export{
+
+                }
+            }
+            > div.main-header-option{
+                > a.main-button-option{
+                    i.fa-angle-down{
+
+                    }
+                }
+                > div.main-option-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .main{
+        .main-content{
+            padding-left:10px;
+            padding-top:15px;
+        }
+    }
+    .main-header{
+        .main-header-name{
+            float:left;
+            padding:27px 0;
+            h2{
+                font-size:22px;
+            }
+        }
+        .main-header-button{
+            float:right;
+            display:block;
+            margin:0;
+            padding:22px 10px 22px 0;
+            > div {
+                > a{
+                    i:first-of-type{
+
+                    }
+                    i.fa-angle-down{
+
+                    }
+                    &:hover{
+
+                    }
+
+
+                }
+            }
+            > div.main-header-handle{
+                > a.main-button-handle{
+
+                }
+                > div.main-handle-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-add{
+                > a.main-button-add{
+
+                }
+                > div.main-add-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-import{
+                display:block;
+                > a.main-button-import{
+
+                }
+            }
+            > div.main-header-export{
+                display:block;
+                > a.main-button-export{
+
+                }
+            }
+            > div.main-header-option{
+                > a.main-button-option{
+                    i.fa-angle-down{
+
+                    }
+                }
+                > div.main-option-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .main{
+        .main-content{
+            transition:padding-left 0.4s;
+            padding-left:225px;
+            padding-top:25px;
+        }
+    }
+    .main-header{
+        .main-header-name{
+            float:left;
+            padding:25px 0;
+            h2{
+                font-size:24px;
+            }
+        }
+        .main-header-button{
+            padding:22px 15px 22px 0;
+            > div {
+                > a{
+                    padding: 7px 12px;
+                    font-size:15px;
+                    i:first-of-type{
+
+                    }
+                    i.fa-angle-down{
+
+                    }
+                    &:hover{
+
+                    }
+
+
+                }
+            }
+            > div.main-header-handle{
+                > a.main-button-handle{
+
+                }
+                > div.main-handle-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-add{
+                > a.main-button-add{
+
+                }
+                > div.main-add-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-import{
+                > a.main-button-import{
+
+                }
+            }
+            > div.main-header-export{
+                > a.main-button-export{
+
+                }
+            }
+            > div.main-header-option{
+                > a.main-button-option{
+                    i.fa-angle-down{
+
+                    }
+                }
+                > div.main-option-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .main-header{
+        .main-header-name{
+            h2{
+
+            }
+        }
+        .main-header-button{
+            > div {
+                > a{
+                    i:first-of-type{
+
+                    }
+                    i.fa-angle-down{
+
+                    }
+                    &:hover{
+
+                    }
+
+
+                }
+            }
+            > div.main-header-handle{
+                > a.main-button-handle{
+
+                }
+                > div.main-handle-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-add{
+                > a.main-button-add{
+
+                }
+                > div.main-add-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div.main-header-import{
+                > a.main-button-import{
+
+                }
+            }
+            > div.main-header-export{
+                > a.main-button-export{
+
+                }
+            }
+            > div.main-header-option{
+                > a.main-button-option{
+                    i.fa-angle-down{
+
+                    }
+                }
+                > div.main-option-box{
+                    ul{
+                        li{
+                            a{
+                                &:hover{
+
+                                }
+                                > div{
+                                    i{
+
+                                    }
+                                }
+                                > i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

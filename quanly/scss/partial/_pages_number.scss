@@ -1,0 +1,104 @@
+.pages-number{
+    padding-top:10px;
+    padding-bottom:15px;
+    background-color:#fff;
+    margin-right:5px;
+    .inner-pages-number{
+        display:table;
+        margin:0 auto;
+        ul{
+            li{
+                float:left;
+                margin-right:1px;
+                margin-left:1px;
+                a{
+                    text-decoration: none;
+                    color:#000;
+                    border:1px solid #ebebeb;
+                    padding:2px 7px;
+                    font-size:16px;
+                    background-color:#fff;
+                    display:block;
+                    cursor:pointer;
+                    &:hover{
+                        text-decoration: none;
+                        background-color: #d7d7d7;
+                    }
+                }
+                &.active-num{
+                    a{
+                        background-color: #d7d7d7;
+                    }
+                }
+            }
+            &::after{
+                display:table;
+                content: "";
+                clear:both;
+            }
+        }
+    }
+    p{
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-size: 13px;
+        color:#b5b5b5;
+    }
+}
+@media (min-width:480px){
+    .pages-number{
+        .inner-pages-number{
+            ul{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .pages-number{
+        margin-right: 10px;
+        .inner-pages-number{
+            ul{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .pages-number{
+        padding:10px 15px 20px 0;
+        margin-right: 16px;
+        .inner-pages-number{
+            ul{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .pages-number{
+        .inner-pages-number{
+            ul{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+}
+

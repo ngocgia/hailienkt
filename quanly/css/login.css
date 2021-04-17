@@ -1,0 +1,333 @@
+/*@media (min-width:480px){
+    
+}
+@media (min-width:768px){
+    
+}
+@media (min-width:992px){
+    
+}
+@media (min-width:1200px){
+    
+}*/
+@keyframes sidebar1open {
+  35% {
+    transform: translate(0, 7px); }
+  100% {
+    transform: translate(0, 7px) rotate(45deg); } }
+@keyframes sidebar3open {
+  35% {
+    transform: translate(0, -7px); }
+  100% {
+    transform: translate(0, -7px) rotate(-45deg); } }
+@keyframes sidebar1close {
+  0% {
+    transform: translate(0, 7px) rotate(45deg); }
+  35% {
+    transform: translate(0, 7px) rotate(0deg); }
+  100% {
+    transform: translate(0, 0px) rotate(0deg); } }
+@keyframes sidebar3close {
+  0% {
+    transform: translate(0, -7px) rotate(-45deg); }
+  35% {
+    transform: translate(0, -7px) rotate(0deg); }
+  100% {
+    transform: translate(0, 0px) rotate(0deg); } }
+.ink {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  transform: scale(0); }
+
+/*animation effect*/
+.ink.animate {
+  animation: ripple 0.5s linear; }
+
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  100% {
+    opacity: 0;
+    transform: scale(2.5); } }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 25, 2017, 3:28:48 PM
+    Author     : dcpt
+*/
+@font-face {
+  font-family: exo;
+  src: url(../font/Exo-Regular.ttf); }
+@font-face {
+  font-family: lato;
+  src: url(../font/Lato-Regular.ttf); }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../font/icomoon.eot?sietb4");
+  src: url("../font/icomoon.eot?sietb4#iefix") format("embedded-opentype"), url("../font/icomoon.ttf?sietb4") format("truetype"), url("../font/icomoon.woff?sietb4") format("woff"), url("../font/icomoon.svg?sietb4#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-pencil:before {
+  content: "\e905"; }
+
+.icon-file-text:before {
+  content: "\e922"; }
+
+.icon-spinner9:before {
+  content: "\e982"; }
+
+.icon-search:before {
+  content: "\e986"; }
+
+.icon-cogs:before {
+  content: "\e995"; }
+
+.icon-bin2:before {
+  content: "\e9ad"; }
+
+.icon-cross:before {
+  content: "\ea0f"; }
+
+.icon-checkmark:before {
+  content: "\ea10"; }
+
+body, td, th {
+  font-size: 14px;
+  font-family: arial; }
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #262626;
+  background-color: #eee;
+  position: relative; }
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #ccc; }
+
+::-webkit-scrollbar-thumb {
+  background: #a0a0a0; }
+
+* {
+  box-sizing: border-box; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.clear {
+  clear: both; }
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  transition: width 350ms;
+  width: 100%; }
+
+@media (min-width: 480px) {
+  .container {
+    width: 460px; } }
+@media (min-width: 768px) {
+  .container {
+    width: 740px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
+.btn {
+  border-radius: 3px;
+  background: #d6644a;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 15px;
+  font-size: 12px;
+  /*    font-weight: 700;*/
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+  border: none;
+  /*    text-transform: uppercase;*/
+  transition: all 0.2s; }
+  .btn:hover {
+    background: #444;
+    color: #fff; }
+
+.field {
+  height: 36px;
+  background: #343434;
+  border: none;
+  color: #ccc;
+  padding: 0 20px;
+  line-height: 36px;
+  outline: 0; }
+
+label {
+  padding: 11px 10px;
+  color: #bbb;
+  font-weight: 400; }
+
+ .unactive {
+	display: none;
+  }
+.login {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  font-size: 14px; }
+  
+  .login .login-box {
+    padding: 20px; }
+    .login .login-box .form-group {
+      margin-bottom: 10px; }
+      .login .login-box .form-group span {
+        min-width: 125px;
+        float: left;
+        line-height: 36px; }
+    .login .login-box .capcha img {
+      height: 37px;
+      float: left;
+      margin-right: 30px; }
+    .login .login-box .submit input {
+      margin-right: 25px; }
+    .login .login-box .submit a:hover {
+      text-decoration: none; }
+
+.forgot-pw {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  font-size: 14px; }
+  .forgot-pw .forgot-pw-box {
+    display: table;
+    border-spacing: 10px;
+    margin: 0 auto;
+    padding: 20px; }
+    .forgot-pw .forgot-pw-box .form-group {
+      margin-bottom: 10px; }
+      .forgot-pw .forgot-pw-box .form-group span {
+        min-width: 125px;
+        display: inline-block; }
+    .forgot-pw .forgot-pw-box label {
+      padding: 11px 10px;
+      color: #bbb;
+      font-weight: 400; }
+    .forgot-pw .forgot-pw-box .capcha img {
+      height: 37px;
+      float: left;
+      margin-right: 30px; }
+    .forgot-pw .forgot-pw-box .send-email a {
+      margin-left: 30px; }
+
+input[type=text], input[type=password] {
+  outline: none;
+  border: none; }
+  input[type=text]:focus, input[type=password]:focus {
+    outline: none; }
+
+input[type=button], input[type=submit] {
+  outline: none;
+  border: none; }
+  input[type=button]:focus, input[type=submit]:focus {
+    outline: none; }
+  input[type=button]:hover, input[type=submit]:hover {
+    outline: none; }
+
+html, body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* jssor slider loading skin spin css */
+.jssorl-009-spin img {
+  animation-name: jssorl-009-spin;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@keyframes jssorl-009-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.jssorb064 {
+  position: absolute; }
+
+.jssorb064 .i {
+  position: absolute;
+  cursor: pointer; }
+
+.jssorb064 .i .b {
+  fill: #000;
+  fill-opacity: .5;
+  stroke: #000;
+  stroke-width: 400;
+  stroke-miterlimit: 10;
+  stroke-opacity: 0.5; }
+
+.jssorb064 .i:hover .b {
+  fill-opacity: .8; }
+
+.jssorb064 .iav .b {
+  fill: #fff;
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-opacity: .7;
+  stroke-width: 2000; }
+
+.jssorb064 .iav:hover .b {
+  fill-opacity: 1; }
+
+.jssorb064 .i.idn {
+  opacity: .3; }
+
+.jssora051 {
+  display: block;
+  position: absolute;
+  cursor: pointer; }
+
+.jssora051 .a {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 360;
+  stroke-miterlimit: 10; }
+
+.jssora051:hover {
+  opacity: .8; }
+
+.jssora051.jssora051dn {
+  opacity: .5; }
+
+.jssora051.jssora051ds {
+  opacity: .3;
+  pointer-events: none; }
+
+/*# sourceMappingURL=login.css.map */

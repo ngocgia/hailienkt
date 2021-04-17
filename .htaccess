@@ -1,0 +1,52 @@
+RewriteEngine on
+Options +FollowSymlinks
+
+
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+
+
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+<files config.php>
+order allow,deny
+deny from all
+</files>
+
+# disable the server signature
+ServerSignature Off
+
+# limit file uploads to 10mb
+LimitRequestBody 10240000
+
+Options -Indexes
+
+ErrorDocument 404 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 500 /index.php
+
+RewriteRule ^trang-chu.html$ ?act=trangchu
+RewriteRule ^gioi-thieu.html$ ?act=gioithieu
+RewriteRule ^lien-he.html$ ?act=lienhe
+RewriteRule ^chinh-sach.html$ ?act=chinhsach
+RewriteRule ^video.html$ ?act=video
+
+
+RewriteRule ^dich-vu.html$ ?act=dichvu
+RewriteRule ^dichvu/chitiet/(\d+)-([a-zA-Z0-9_-]+).html$ ?act=dichvu_detail&iddv=$1
+RewriteRule ^dichvu/chitiet/(\d+)/dich-vu.html$ ?act=dichvu&num=$1
+
+RewriteRule ^hoat-dong.html$ ?act=hoatdong
+RewriteRule ^hoatdong/chitiet/(\d+)-([a-zA-Z0-9_-]+).html$ ?act=hoatdong_detail&idhd=$1
+RewriteRule ^hoatdong/(\d+)/hoat-dong.html$ ?act=hoatdong&num=$1
+
+RewriteRule ^san-pham.html$ ?act=sanpham
+RewriteRule ^sanpham/(\d+)$ ?act=sanpham&num=$1
+RewriteRule ^sanpham/([a-zA-Z0-9_.]+)-([a-zA-Z0-9_-]+).html$ ?act=sanpham&type=$1
+RewriteRule ^sanpham/(\d+)/([a-zA-Z0-9_.]+)-([a-zA-Z0-9_-]+).html$ ?act=sanpham&type=$2&num=$1
+RewriteRule ^sanpham/chitiet/(\d+)-([a-zA-Z0-9_-]+).html$ ?act=sanpham_detail&idsp=$1

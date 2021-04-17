@@ -1,0 +1,700 @@
+.order{
+    margin-top:15px;
+    .order-menu{
+        padding-left:0;
+        padding-right:0;
+        padding-bottom: 40px;
+        position:absolute;
+        display:block;
+        width:98%;
+        &.order-menu-mobile{
+            display:none;
+        }
+        .order-menu-header{
+            background-color:#fff;
+            position:relative;
+            > ul{
+                > li{
+                    float:left;
+                    &.menu-active{
+                        > a{
+                            color:#277ce6;
+                            border-bottom:2px solid #277ce6;
+                        }
+                    }
+                    > a{
+                        display:block;
+                        padding:10px 20px 8px;
+                        text-decoration:none;
+                        font-size:15px;
+                        color:#262626;
+                        border-bottom:2px solid transparent;
+                        cursor:pointer;
+                        &:hover{
+                            text-decoration:none;
+                            color:#277ce6;
+                            border-bottom:2px solid #277ce6;
+                        }
+                    }
+                }
+                &::after{
+                    display:table;
+                    content:"";
+                    clear:both;
+                }
+            }
+            .order-menu-overflow{
+                position:absolute;
+                right:0;
+                top:0;
+                cursor:pointer;
+                .order-menu-dot{
+                    padding:20px 15px 14px;
+                    > div{
+                        width:5px;
+                        height:5px;
+                        border-radius:100%;
+                        background-color:#797979;
+                        float:left;
+                        margin-right:4px;
+                        transition:transform 0.2s;
+                        &:nth-child(1){
+                            &.order-menu-dot-active{
+                                transform:translate(0,0);
+                            }
+                        }
+                        &:nth-child(2){
+                            &.order-menu-dot-active{
+                                transform:translate(0,-5px);
+                            }
+                        }
+                        &:nth-child(3){
+                            &.order-menu-dot-active{
+                                transform:translate(0,-10px);
+                            }
+                        }
+                    }
+                    &::after{
+                        display:table;
+                        content:"";
+                        clear:both;
+                    }
+                }
+                .inner-order-menu-overflow{
+                    position:relative;
+                    > ul{
+                        position:absolute;
+                        z-index:100;
+                        background-color:#fdfdfd;
+                        right:0;
+                        top:0;
+                        box-shadow:0 0 10px 3px #e2e2e2;
+                        display:none;
+                        > li{
+                            &.menu-active{
+                                a{
+                                    color:#277ce6;
+                                }
+                            }
+                            > a{
+                                display:block;
+                                text-decoration:none;
+                                white-space:nowrap;
+                                color:#262626;
+                                padding:10px 20px 8px;
+                                &:hover{
+                                    text-decoration:none;
+                                    color:#277ce6;
+                                }
+                            }
+                        }
+                        &::after{
+                            display:table;
+                            content:"";
+                            clear:both;
+                        }
+                    }
+                }
+            }
+        }
+        .order-search{
+            background-color:#fff;
+            margin:10px 0;
+            div{
+                input{
+                    float:left;
+                    width:calc(100% - 45px);
+                    outline:none;
+                    border:none;
+                    padding:10px 20px;
+                    &:focus{
+                        border:none;
+                        outline:none;
+                    }
+                }
+                button{
+                    float:left;
+                    background: none;
+                    border: none;
+                    padding:5px 10px 2px;
+                    font-size:24px;
+                    &:focus{
+                        border:none;
+                        outline:none;
+                    }
+                    > i{
+                        color:#b5b5b5;
+                    }
+                }
+                &::after{
+                    display:table;
+                    content:"";
+                    clear:both;
+                }
+            }
+        }
+        .order-list{
+            .one-order-list{
+/*                display:none;*/
+                &.one-order-active{
+                    display:block;
+                }
+                .order-list-menu{
+                    background-color:#fff;
+                    background-clip:content-box;
+                    padding-left:0;
+                    padding-right:0;
+                    > ul{
+                        > li{
+                            width:50%;
+                            float:left;
+                            &.list-active{
+                                > a{
+                                    background-color:#3377a2;
+                                    color:#fff;
+                                }
+                            }
+                            > a{
+                                display:block;
+                                padding:10px 20px;
+                                text-decoration:none;
+                                color:#262626;
+                                cursor:pointer;
+                                &:hover{
+                                    text-decoration:none;
+                                    background-color:#3377a2;
+                                    color:#fff;
+                                }
+                            }
+                        }
+                        &::after{
+                            display:table;
+                            content:"";
+                            clear:both;
+                        }
+                    }
+                }
+                .order-list-row{
+                    padding-left:0;
+                    padding-right:0;
+                    background-clip:content-box;
+                    position:relative;
+                    margin-top: 5px;
+/*                    margin-left: -5px;*/
+                    .one-dishes{
+                        padding:5px;
+/*                        position:absolute;*/
+                        background-color:#fff;
+                        background-clip:content-box;
+                        .inner-one-dishes{
+                            position:relative;
+                            overflow:hidden;
+                        }
+/*                        display:none;*/
+
+                        &.one-menu-display{
+                            display:block;
+                        }
+                        &.one-dishes-display{
+                            display:block;
+                        }
+                        .one-dishes-thumb{
+                            margin-top:10px;
+                            a{
+                                display:block;
+                                img{
+                                    margin:0 auto;
+                                    max-width: 110px;
+                                    max-height: 70px;
+                                }
+                            }
+                        }
+                        .one-dishes-name{
+                            margin-top:5px;
+                            margin-bottom:5px;
+                            a{
+                                text-decoration:none;
+                                color:#262626;
+                                display:block;
+                                padding:5px 10px;
+                                text-align:center;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                &:hover, &:active{
+                                    text-decoration:none;
+                                    color:#277ce6;
+                                    overflow:visible;
+                                    white-space:normal;
+                                }
+                            }
+                        }
+                        .one-dishes-price{
+                            position:absolute;
+                            top:2px;
+                            right:0;
+                            > div{
+                                position:relative;
+                                padding:3px 6px;
+                                background-color:rgb(51, 119, 162);
+                                p{
+                                    margin-bottom:0;
+                                    color:#fff;
+                                    font-size:13px;
+                                }
+                                &::after{
+                                    content:"";
+                                    position:absolute;
+                                    top:100%;
+                                    right:0;
+                                    width:0;
+                                    height:0;
+                                    border:3px solid #22648e;
+                                    border-right:3px solid transparent;
+                                    border-bottom:3px solid transparent;
+                                }
+                            }
+                        }
+                        .one-dishes-add{
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            a{
+                                display:block;
+                                color:#4bac4d;
+                                padding: 10px 12px;
+                                white-space: nowrap;
+                                cursor:pointer;
+                                text-decoration:none;
+                                &:hover{
+                                    text-decoration:none;
+                                }
+                                > div{
+                                    display:inline-block;
+                                    width:16px;
+                                    height:16px;
+/*                                    border:1px solid #4bac4d;*/
+                                    border-radius:2px;
+                                    position:relative;
+                                    font-size:16px;
+                                    button{
+                                        position:absolute;
+                                        top:0;
+                                        left:0;
+                                        background:none;
+                                        border:none;
+                                        outline:none;
+                                        padding:0;
+                                        &:focus{
+                                            background:none;
+                                            outline:none;
+                                        }
+                                    }
+                                    i{
+                                        line-height: 16px;
+/*                                        display:none;*/
+                                        font-size: 16px;
+                                    }
+                                }
+                                > i{
+                                    margin-right:7px;
+                                }
+                            }
+                        }
+                        .one-dishes-minus{
+                            position:absolute;
+                            top:40px;
+                            left:0;
+                            a{
+                                display:block;
+                                color:#4bac4d;
+                                padding: 10px 12px;
+                                white-space: nowrap;
+                                cursor:pointer;
+                                text-decoration:none;
+                                &:hover{
+                                    text-decoration:none;
+                                }
+                                > div{
+                                    display:inline-block;
+                                    width:16px;
+                                    height:16px;
+/*                                    border:1px solid #4bac4d;*/
+                                    border-radius:2px;
+                                    position:relative;
+                                    font-size:16px;
+                                    button{
+                                        position:absolute;
+                                        top:0;
+                                        left:0;
+                                        background:none;
+                                        border:none;
+                                        outline:none;
+                                        padding:0;
+                                        &:focus{
+                                            background:none;
+                                            outline:none;
+                                        }
+                                    }
+                                    i{
+                                        line-height: 16px;
+/*                                        display:none;*/
+                                        font-size: 16px;
+                                    }
+                                }
+                                > i{
+                                    margin-right:7px;
+                                }
+                            }
+                        }
+                    }
+                    &::after{
+                        display:table;
+                        content:"";
+                        clear:both;
+                    }
+                }
+                &::after{
+                    display:table;
+                    content:"";
+                    clear:both;
+                }
+            }
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+        }
+    }
+    &::after{
+        display:table;
+        content:"";
+        clear:both;
+    }
+}
+
+@media (min-width:480px){
+    .order{
+        .order-menu{
+            .order-menu-header{
+                > ul{
+                    > li{
+                        > a{
+
+                        }
+                    }
+                }
+            }
+            .order-search{
+                > div{
+                    > input{
+
+                    }
+                    > button{
+                        > i{
+
+                        }
+                    }
+                }
+            }
+            .order-list{
+                .one-order-list{
+                    .order-list-menu{
+                        
+                        > ul{
+                            > li{
+                                > a{
+
+                                }
+                            }
+                        }
+                    }
+                    .order-list-row{
+                        .one-dishes{
+                            .one-dishes-thumb{
+                                img{
+
+                                }
+                            }
+                            .one-dishes-name{
+                                a{
+                                    
+                                }
+                            }
+                            .one-dishes-price{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .order{
+        .order-menu{
+            padding-right:5px;
+            padding-bottom:0;
+            position:relative;
+            width:50%;
+            .order-menu-header{
+                > ul{
+                    > li{
+                        > a{
+
+                        }
+                    }
+                }
+            }
+            .order-search{
+                > div{
+                    > input{
+
+                    }
+                    > button{
+                        > i{
+
+                        }
+                    }
+                }
+            }
+            .order-list{
+                .one-order-list{
+                    .order-list-menu{
+                        padding-left:0;
+                        padding-right:5px;
+                        > ul{
+                            > li{
+                                width:100%;
+                                float:none;
+                                > a{
+
+                                }
+                            }
+                        }
+                    }
+                    .order-list-row{
+                        margin-top:-5px;
+                        margin-left:0;
+                        .one-dishes{
+                            .one-dishes-thumb{
+                                a{
+                                    img{
+                                        max-width: 130px;
+                                        max-height: 100px;
+                                    }
+                                }
+                            }
+                            .one-dishes-name{
+                                a{
+
+                                }
+                            }
+                            .one-dishes-price{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .order{
+        margin-top:20px;
+        .order-menu{
+            .order-menu-header{
+                > ul{
+                    > li{
+                        > a{
+
+                        }
+                    }
+                }
+                .order-menu-overflow{
+                    .order-menu-dot{
+                        > div{
+                            &:nth-child(1){
+                                &.order-menu-dot-active{
+                                    
+                                }
+                            }
+                            &:nth-child(2){
+                                &.order-menu-dot-active{
+                                    
+                                }
+                            }
+                            &:nth-child(3){
+                                &.order-menu-dot-active{
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .inner-order-menu-overflow{
+                        > ul{
+                            > li{
+                                > a{
+                                    &:hover{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .order-search{
+                > div{
+                    > input{
+
+                    }
+                    > button{
+                        > i{
+
+                        }
+                    }
+                }
+            }
+            .order-list{
+                .one-order-list{
+                    .order-list-menu{
+                        > ul{
+                            > li{
+                                > a{
+
+                                }
+                            }
+                        }
+                    }
+                    .order-list-row{
+                        .one-dishes{
+                            display:block;
+/*                            visibility:hidden;
+                            transform:scale(0,0);
+                            transition:transform 0.4s, visibility 0.4s, opacity 0.4s, top 0.4s, left 0.4s;*/
+                            &.one-menu-display{
+/*                                opacity:1;
+                                visibility:visible;
+                                transform:scale(1,1);*/
+                            }
+                            &.one-dishes-display{
+/*                                opacity:1;
+                                visibility:visible;
+                                transform:scale(1,1);*/
+                            }
+                            .one-dishes-thumb{
+                                a{
+                                    img{
+                                        
+                                    }
+                                }
+                            }
+                            .one-dishes-name{
+                                a{
+
+                                }
+                            }
+                            .one-dishes-price{
+                                > div{
+                                    padding:4px 9px;
+                                    p{
+                                        font-size:14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .order{
+        .order-menu{
+            .order-menu-header{
+                > ul{
+                    > li{
+                        > a{
+
+                        }
+                    }
+                }
+            }
+            .order-search{
+                > div{
+                    > input{
+
+                    }
+                    > button{
+                        > i{
+
+                        }
+                    }
+                }
+            }
+            .order-list{
+                .one-order-list{
+                    .order-list-menu{
+                        > ul{
+                            > li{
+                                > a{
+
+                                }
+                            }
+                        }
+                    }
+                    .order-list-row{
+                        .one-dishes{
+                            .one-dishes-thumb{
+                                a{
+                                    img{
+
+                                    }
+                                }
+                            }
+                            .one-dishes-name{
+                                a{
+
+                                }
+                            }
+                            .one-dishes-price{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

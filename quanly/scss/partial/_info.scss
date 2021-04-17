@@ -1,0 +1,912 @@
+.main{
+    .main-content{
+        transition:padding-left 0.4s;
+        padding-left:5px;
+        padding-top:15px;
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+}
+
+.info-header{
+    position: relative;
+    z-index: 50;
+    .info-header-name{
+        padding:5px 0 15px;
+        h2{
+            text-align:center;
+            color:#333;
+            font-size:22px;
+            margin:0;
+            font-weight:bold;
+        }
+    }
+    &::after{
+        display:table;
+        content:"";
+        clear:both;
+    }
+}
+
+
+input, select{
+    outline:none;
+    &:focus{
+        outline:none;
+    }
+}
+.one-add{
+    margin-bottom:10px;
+    label{
+        float:left;
+        font-weight: bold;
+        margin-bottom:0;
+        padding-top:7px;
+        margin-right:10px;
+        font-size:15px;
+        min-width: 100px;
+        font-family: lato;
+        padding-bottom: 3px;
+    }
+    .one-wrap-form{
+        float:left;
+        input[type=text], input[type=number], input[type=password]{
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            padding:7px 10px;
+            border-radius:3px;
+            width: 260px;
+            &:focus{
+                border: 1px solid #4bac4d;
+            }
+        }
+        input[type=file]{
+
+        }
+        textarea{
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            padding:7px 10px;
+            border-radius:3px;
+            width:260px;
+            outline:none;
+            &:focus{
+                border: 1px solid #4bac4d;
+                outline:none;
+            }
+        }
+        select{
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            padding:7px 10px;
+            border-radius:3px;
+            width: 260px;
+            &:focus{
+                border: 1px solid #4bac4d;
+            }
+        }
+    }
+    .one-help{
+        float:left;
+        position:relative;
+        margin-left:8px;
+        z-index:10;
+        > i{
+            color:#c8c8c8;
+            font-size:16px;
+            cursor:pointer;
+            &:hover{
+                color:#478d00;
+            }
+        }
+        .one-help-text{
+            display:none;
+            position:absolute;
+            top:-7px;
+            left:calc(100% + 15px);
+            border:1px solid #478d00;
+            background-color:#fff;
+            .inner-one-help-text{
+                padding:5px 10px;
+                position:relative;
+                p{
+                    white-space:nowrap;
+                    margin-bottom:0;
+                    color:#666;
+                }
+                &::after{
+                    position:absolute;
+                    content:"";
+                    top:calc(50% - 6px);
+                    right:100%;
+                    width:0;
+                    height:0;
+                    border:6px solid transparent;
+                    border-right:6px solid #478d00;
+                }
+                
+            }
+        }
+    }
+    &::after{
+        display:table;
+        content:"";
+        clear:both;
+    }
+}
+
+
+.add-table{
+    background-color:#fff;
+    position: relative;
+    z-index: 49;
+    padding-right:5px;
+    background-clip: content-box;
+    border: 1px solid #e0d8d8;
+    .add-direction{
+        border-bottom:1px solid #4bac4d;
+        margin-bottom:20px;
+        padding-top: 8px;
+        background-color:#e5e6e6;
+        ul{
+            li{
+                float:left;
+                a{
+                    display:block;
+                    padding:5px 20px;
+                    color:#666;
+                    text-decoration:none;
+                    cursor:pointer;
+                    font-size:15px;
+                    &:hover{
+                        text-decoration: none;
+                        color:#010101;
+                    }
+                }
+                &.add-acti-dir{
+                    a{
+                        color:#010101;
+                        border-bottom:2px solid #4bac4d;
+                    }
+                }
+            }
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+        }
+    }
+    .add-content{
+        padding-bottom:20px;
+        .add-info{
+            .add-info-left{
+                padding-left:20px;
+                padding-right:0;
+                .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid #eee;
+                    label{
+
+                    }
+                    .one-wrap-form{
+                        p{
+                            margin-bottom:0;
+                            padding: 7px 10px;
+                            font-size: 15px;
+                            min-width: 260px;
+                        }
+                    }
+                    .one-help{
+                        margin-top:8px;
+                        > i{
+
+                        }
+                        .one-help-text{
+                            .inner-one-help-text{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .add-info-right{
+                padding-left:20px;
+                padding-right:0;
+
+            }
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+        }
+        .add-desc{
+            padding-left: 20px;
+            .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                label{
+
+                }
+                .one-wrap-form{
+                    
+                }
+                .one-help{
+                    margin-top:8px;
+                    > i{
+
+                    }
+                    .one-help-text{
+                        .inner-one-help-text{
+                            p{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .add-submit{
+        padding-bottom:20px;
+        .inner-add-submit{
+            display:table;
+            margin:0 auto;
+            input[type=submit]{
+                
+            }
+        }
+    }
+}
+
+input[type=submit]{
+    border: none;
+    background: #4bac4d;
+    padding: 6px 17px;
+    color: #fff;
+    font-size: 15px;
+    &:hover{
+        background:#3b963d;
+    }
+    &:focus{
+        border:none;
+    }
+}
+
+
+@media (min-width:480px){
+    .info-header{
+        .info-header-name{
+            h2{
+
+            }
+        }
+    }
+
+
+    input, select{
+        &:focus{
+            
+        }
+    }
+    .one-add{
+        label{
+
+        }
+        .one-wrap-form{
+            input[type=text], input[type=number], input[type=password]{
+                &:focus{
+
+                }
+            }
+            input[type=file]{
+
+            }
+            textarea{
+                &:focus{
+
+                }
+            }
+            select{
+                &:focus{
+                    
+                }
+            }
+        }
+        .one-help{
+            > i{
+                &:hover{
+
+                }
+            }
+            .one-help-text{
+                .inner-one-help-text{
+                    p{
+
+                    }
+                    &::after{
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .add-table{
+        .add-direction{
+            ul{
+                li{
+                    a{
+                        &:hover{
+
+                        }
+                    }
+                    &.add-acti-dir{
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+        .add-content{
+            .add-info{
+                .add-info-left{
+                    .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                        label{
+
+                        }
+                        .one-wrap-form{
+                            p{
+
+                            }
+                        }
+                        .one-help{
+                            > i{
+
+                            }
+                            .one-help-text{
+                                .inner-one-help-text{
+                                    p{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .add-info-right{
+
+                }
+            }
+            .add-desc{
+                .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                    label{
+
+                    }
+                    .one-wrap-form{
+
+                    }
+                    .one-help{
+                        > i{
+
+                        }
+                        .one-help-text{
+                            .inner-one-help-text{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .add-submit{
+            .inner-add-submit{
+                input[type=submit]{
+
+                }
+            }
+        }
+    }
+
+    input[type=submit]{
+        &:hover{
+
+        }
+        &:focus{
+
+        }
+    }
+}
+@media (min-width:768px){
+    .main{
+        .main-content{
+            padding-left:10px;
+            padding-top:15px;
+        }
+    }
+    
+    .info-header{
+        .info-header-name{
+            float:left;
+            padding:27px 0;
+            h2{
+                font-size:22px;
+            }
+        }
+    }
+
+
+    input, select{
+        &:focus{
+            
+        }
+    }
+    .one-add{
+        margin-bottom:15px;
+        label{
+            padding-bottom:0;
+        }
+        .one-wrap-form{
+            input[type=text], input[type=number], input[type=password]{
+                width: 270px;
+                &:focus{
+
+                }
+            }
+            input[type=file]{
+
+            }
+            textarea{
+                width:500px;
+                &:focus{
+
+                }
+            }
+            select{
+                width: 270px;
+                &:focus{
+                    
+                }
+            }
+        }
+        .one-help{
+            > i{
+                &:hover{
+
+                }
+            }
+            .one-help-text{
+                .inner-one-help-text{
+                    p{
+
+                    }
+                    &::after{
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .add-table{
+        padding-right:10px;
+        .add-direction{
+            ul{
+                li{
+                    a{
+                        padding:7px 30px;
+                        font-size:16px;
+                        &:hover{
+
+                        }
+                    }
+                    &.add-acti-dir{
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+        .add-content{
+            .add-info{
+                .add-info-left{
+                    padding-left:30px;
+                    .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                        label{
+
+                        }
+                        .one-wrap-form{
+                            p{
+                                min-width:auto;
+                            }
+                        }
+                        .one-help{
+                            > i{
+
+                            }
+                            .one-help-text{
+                                .inner-one-help-text{
+                                    p{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .add-info-right{
+                    padding-left:30px;
+                }
+            }
+            .add-desc{
+                padding-left:30px;
+                .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                    label{
+
+                    }
+                    .one-wrap-form{
+
+                    }
+                    .one-help{
+                        > i{
+
+                        }
+                        .one-help-text{
+                            .inner-one-help-text{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .add-submit{
+            .inner-add-submit{
+                input[type=submit]{
+
+                }
+            }
+        }
+    }
+
+    input[type=submit]{
+        padding: 7px 25px;
+        font-size: 16px;
+        &:hover{
+
+        }
+        &:focus{
+
+        }
+    }
+}
+@media (min-width:992px){
+    .main{
+        .main-content{
+            transition:padding-left 0.4s;
+            padding-left:225px;
+            padding-top:25px;
+        }
+    }
+    
+    .info-header{
+        .info-header-name{
+            float:left;
+            padding:25px 0;
+            h2{
+                font-size:24px;
+            }
+        }
+    }
+
+
+    input, select{
+        &:focus{
+            
+        }
+    }
+    .one-add{
+        margin-bottom:15px;
+        label{
+
+        }
+        .one-wrap-form{
+            input[type=text], input[type=number], input[type=password]{
+                &:focus{
+
+                }
+            }
+            input[type=file]{
+
+            }
+            textarea{
+                &:focus{
+
+                }
+            }
+            select{
+                &:focus{
+                    
+                }
+            }
+        }
+        .one-help{
+            > i{
+                &:hover{
+
+                }
+            }
+            .one-help-text{
+                .inner-one-help-text{
+                    p{
+
+                    }
+                    &::after{
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .add-table{
+        padding-right: 15px;
+        .add-direction{
+            ul{
+                li{
+                    a{
+                        &:hover{
+
+                        }
+                    }
+                    &.add-acti-dir{
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+        .add-content{
+            .add-info{
+                .add-info-left{
+                    padding-left:40px;
+                    .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                        label{
+
+                        }
+                        .one-wrap-form{
+                            p{
+
+                            }
+                        }
+                        .one-help{
+                            > i{
+
+                            }
+                            .one-help-text{
+                                .inner-one-help-text{
+                                    p{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .add-info-right{
+                    padding-left:40px;
+                }
+            }
+            .add-desc{
+                padding-left:40px;
+                .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                    label{
+
+                    }
+                    .one-wrap-form{
+
+                    }
+                    .one-help{
+                        > i{
+
+                        }
+                        .one-help-text{
+                            .inner-one-help-text{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .add-submit{
+            .inner-add-submit{
+                input[type=submit]{
+
+                }
+            }
+        }
+    }
+
+    input[type=submit]{
+        &:hover{
+
+        }
+        &:focus{
+
+        }
+    }
+}
+@media (min-width:1200px){
+    .info-header{
+        .info-header-name{
+            h2{
+
+            }
+        }
+    }
+
+
+    input, select{
+        &:focus{
+            
+        }
+    }
+    .one-add{
+        label{
+
+        }
+        .one-wrap-form{
+            input[type=text], input[type=number], input[type=password]{
+                &:focus{
+
+                }
+            }
+            input[type=file]{
+
+            }
+            textarea{
+                &:focus{
+
+                }
+            }
+            select{
+                &:focus{
+                    
+                }
+            }
+        }
+        .one-help{
+            > i{
+                &:hover{
+
+                }
+            }
+            .one-help-text{
+                .inner-one-help-text{
+                    p{
+
+                    }
+                    &::after{
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .add-table{
+        .add-direction{
+            ul{
+                li{
+                    a{
+                        &:hover{
+
+                        }
+                    }
+                    &.add-acti-dir{
+                        a{
+
+                        }
+                    }
+                }
+            }
+        }
+        .add-content{
+            .add-info{
+                .add-info-left{
+                    .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                        label{
+
+                        }
+                        .one-wrap-form{
+                            p{
+
+                            }
+                        }
+                        .one-help{
+                            > i{
+
+                            }
+                            .one-help-text{
+                                .inner-one-help-text{
+                                    p{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .add-info-right{
+
+                }
+            }
+            .add-desc{
+                .one-add-phone, .one-add-email, .one-add-logo, .one-add-hotline{
+                    label{
+
+                    }
+                    .one-wrap-form{
+
+                    }
+                    .one-help{
+                        > i{
+
+                        }
+                        .one-help-text{
+                            .inner-one-help-text{
+                                p{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .add-submit{
+            .inner-add-submit{
+                input[type=submit]{
+
+                }
+            }
+        }
+    }
+
+    input[type=submit]{
+        &:hover{
+
+        }
+        &:focus{
+
+        }
+    }
+}

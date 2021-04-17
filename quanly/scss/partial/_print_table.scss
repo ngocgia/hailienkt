@@ -1,0 +1,742 @@
+.print-table{
+    padding-left:0;
+    padding-right:0;
+    padding-bottom: 40px;
+    position:absolute;
+    display:block;
+    width:98%;
+    &.print-table-mobile{
+        display:none;
+    }
+    .print-table-header{
+        background-color:#fff;
+        .print-table-number{
+            float:left;
+            padding:7px 20px 6px;
+            > p{
+                font-size:17px;
+                margin-bottom:0;
+                b{
+                    font-size:20px;
+                    color:#ff2828;
+                }
+            }
+        }
+        .print-table-search{
+            float:left;
+            border-left:1px solid #f3f3f3;
+            > button{
+                background:none;
+                outline:none;
+                border:none;
+                padding:11px 10px 5px;
+                font-size:18px;
+                &:focus{
+                    outline:none;
+                }
+                i{
+                    color: #b5b5b5;
+                }
+            }
+        }
+        .print-table-visitor{
+            float:right;
+            padding:10px 10px 9px;
+            border-left:1px solid #f3f3f3;
+            > p{
+                margin-bottom:0;
+                font-size:16px;
+                color:#585858;
+                > i{
+                    margin-right:5px;
+                    font-size:18px;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+    .print-bill{
+        > table{
+            width:100%;
+            margin-top:10px;
+            tr{
+                background-color:#fff;
+                &:nth-child(1){
+                    background-color:#dcdcdc !important;
+                    td{
+                        font-weight:bold;
+                        color:#484848;
+                        &:nth-child(2){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(3){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(4){
+                            border-right:1px solid #eaeaea;
+                            padding: 10px !important;
+                        }
+                        &:nth-child(5){
+                            text-align:center;
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    background-color:#f9f9f9;
+                }
+                td{
+                    padding: 10px;
+                    &:nth-child(2){
+                        width:55%;
+                        i{
+                            margin-left:10px;
+                        }
+                    }
+                    &:nth-child(3){
+                        width:5%;
+                        padding:7px 10px;
+                        input{
+                            width:40px;
+                            outline:none;
+                            border: 1px solid #ccc;
+                            &:focus{
+                                outline:none;
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        width:30%;
+                        text-align:right;
+                    }
+                    &:nth-child(5){
+                        width:10%;
+                        padding:5px;
+                        cursor:pointer;
+                        text-align:center;
+                        a{
+                            text-align: center;
+                            display:block;
+                            text-decoration:none;
+                            color:#3377a2;
+                            font-size: 16px;
+                            padding: 6px 5px 5px;
+                            &:hover{
+                                text-decoration:none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .print-note{
+            background-color:#fff;
+            > div{
+                margin-bottom:5px;
+                input{
+                    padding:20px;
+                    width:100%;
+                    border:none;
+                    color:#8a8a8a;
+                    &:focus{
+                        outline:none;
+                    }
+                }
+            }
+        }
+        .print-bill-arrow{
+            background-color:#fff;
+            padding:30px 0 10px;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                color:#bbb;
+                i{
+                    margin-right: 7px;
+                    font-size: 16px;
+                    vertical-align:middle;
+                }
+            }
+        }
+    }
+    .print-add{
+        background-color:#fff;
+        margin-top:10px;
+        h5{
+            padding:10px 20px;
+            margin:0;
+            font-size:15px;
+            a{
+                text-decoration:none;
+                color:#696969;
+                &:hover{
+                    text-decoration:none;
+                    color:#277ce6;
+                }
+                i{
+                    margin-right:5px;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+    .print-total-money{
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px 0;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                font-size:16px;
+                font-weight:bold;
+            }
+        }
+        > span{
+            position:absolute;
+            font-weight:bold;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+        }
+    }
+    .print-money-receive{
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px 0;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            font-weight:bold;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            input{
+                width:100px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .print-money-change{
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px 0;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            font-weight:bold;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+        }
+    }
+    .print-bill-option{
+        margin-top:10px;
+        .print-bill-send{
+            float:left;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color: #3377a2;
+                font-weight: bold;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#3377a2;
+                    color:#fff;
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:26px;
+                    margin-bottom:5px;
+                    color:#3377a2;
+                }
+            }
+        }
+        .print-bill-cancel{
+            float:right;
+            margin-right:10px;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#c51515;
+                    color:#fff;
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#c51515;
+                }
+            }
+        }
+        .print-bill-save{
+            float:right;
+            margin-right:10px;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#4bac4d;
+                    color:#fff;    
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#4bac4d;
+                }
+            }
+        }
+        .print-bill-save-add{
+            float:right;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 15px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#4bac4d;
+                    color:#fff;    
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#4bac4d;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+}
+
+@media (min-width:480px){
+    .print-table{
+        .print-table-header{
+            .print-table-number{
+                > p{
+
+                }
+            }
+            .print-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }
+            .print-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .print-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .print-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .print-add{
+            h5{
+
+            }
+        }
+        .print-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .print-bill-option{
+            .print-bill-send{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-cancel{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save-add{
+                a{
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .print-table{
+        padding-left:5px;
+        padding-right:10px;
+        margin-top:0;
+        padding-bottom:0;
+        position:relative;
+        width:41.7%;
+        .print-table-header{
+            .print-table-number{
+                > p{
+
+                }
+            }
+            .print-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }
+            .print-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .print-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .print-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .print-add{
+            h5{
+
+            }
+        }
+        .print-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .print-bill-option{
+            .print-bill-send{
+                a{
+                    padding: 10px 15px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-cancel{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save-add{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .print-table{
+        padding-left:5px;
+        padding-right:15px;
+        .print-table-header{
+            .print-table-number{
+                > p{
+
+                }
+            }
+            .print-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }
+            .print-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .print-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .print-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .print-add{
+            h5{
+
+            }
+        }
+        .print-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .print-bill-option{
+            .print-bill-send{
+                a{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-cancel{
+                a{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save{
+                a{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save-add{
+                a{
+                    padding: 10px 15px;
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .print-table{
+        .print-table-header{
+            .print-table-number{
+                > p{
+
+                }
+            }
+            .print-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }
+            .print-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .print-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .print-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .print-add{
+            h5{
+
+            }
+        }
+        .print-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .print-bill-option{
+            .print-bill-send{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-cancel{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .print-bill-save-add{
+                a{
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}

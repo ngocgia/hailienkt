@@ -1,0 +1,1495 @@
+.order-table{
+    padding-left:0;
+    padding-right:0;
+    padding-bottom: 40px;
+    position:absolute;
+    display:block;
+    width:98%;
+    &.order-table-mobile{
+        display:none;
+    }
+    .order-table-header{
+        background-color:#fff;
+        .order-table-number{
+            float:left;
+            padding:7px 20px 6px;
+            > p{
+                font-size:17px;
+                margin-bottom:0;
+                b{
+                    font-size:20px;
+                    color:#ff2828;
+                }
+            }
+        }
+/*        .order-table-search{
+            float:left;
+            border-left:1px solid #f3f3f3;
+            input{
+                float:left;
+                width:300px;
+                outline:none;
+                border:none;
+                padding:11px 20px 10px;
+                &:focus{
+                    border:none;
+                    outline:none;
+                }
+            }
+            button{
+                background:none;
+                outline:none;
+                border:none;
+                padding:11px 10px 5px;
+                font-size:18px;
+                &:focus{
+                    outline:none;
+                }
+                i{
+                    color: #b5b5b5;
+                }
+            }
+        }*/
+        .order-table-visitor{
+            float:right;
+            padding:10px 10px 9px;
+            border-left:1px solid #f3f3f3;
+            > p{
+                margin-bottom:0;
+                font-size:16px;
+                color:#585858;
+                > i{
+                    margin-right:5px;
+                    font-size:18px;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+    .order-info{
+        background-color:#fff;
+        margin:10px 0;
+        fieldset{
+            margin-top:15px;
+        }
+        .order-info-more{
+            text-align:center;
+            padding-right:10px;
+            padding-bottom:10px;
+            a{
+                border: none;
+                background: #333;
+                border-radius: 3px;
+                color: #fff;
+                height: 33px;
+                line-height: 33px;
+                display: inline-block;
+                font-size: 11px;
+                margin: 8px 0 0;
+                padding: 0 20px;
+                text-transform: uppercase;
+                text-decoration:none;
+                &:hover{
+                    text-decoration:none;
+                    background:#3377a2;
+                }
+            }
+        }
+        div{
+            input{
+                float:left;
+                width:calc(100% - 45px);
+                outline:none;
+                border:none;
+                padding:10px;
+                &:focus{
+                    border:none;
+                    outline:none;
+                }
+            }
+            button{
+                float:left;
+                background: none;
+                border: none;
+                padding:5px 10px 2px;
+                font-size:24px;
+                &:focus{
+                    border:none;
+                    outline:none;
+                }
+                > i{
+                    color:#b5b5b5;
+                }
+            }
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+        }
+        .form-group {
+            margin-bottom:5px;
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+            > label{
+                padding-left:0;
+                padding-right:0;
+            }
+            > div{
+                padding-left:20px;
+                padding-right:0;
+                padding-top:5px;
+            }
+        }
+        .form-group{
+            p{
+                margin-top:7px;
+                margin-bottom:0;
+            }
+            label{
+                white-space:nowrap;
+                font-weight:400;
+                padding-top: 7px;
+                margin-bottom: 0;
+                padding-left: 20px;
+                text-align: left;
+            }
+            input{
+                width: 95%;
+                background-color:#fbfbfb;
+            }
+            select{
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                overflow: hidden;
+                display: block;
+                position: relative;
+                background: #ededed;
+                border: none;
+                text-align: center;
+            }
+            texarea{
+                height: 63px;
+                margin: 0px 1px 0px 0px;
+                width: 360px;
+            }
+        }
+    }
+    .order-bill-avalaible{
+        > table{
+            width:100%;
+            margin-top:10px;
+            tr{
+                background-color:#fff;
+                &:nth-child(1){
+                    background-color:#dcdcdc !important;
+                    td{
+                        font-weight:bold;
+                        color:#484848;
+                        &:nth-child(2){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(3){
+                            border-right:1px solid #eaeaea;
+                            word-break: normal;
+                        }
+                        &:nth-child(4){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(5){
+                            border-right:1px solid #eaeaea;
+                            padding: 10px !important;
+                        }
+                        &:nth-child(6){
+                            text-align:center;
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    background-color:#f9f9f9;
+                }
+                td{
+                    padding: 10px;
+                    &:nth-child(2){
+                        width:35%;
+                        i{
+                            margin-left:10px;
+                        }
+                    }
+                    &:nth-child(3){
+                        word-break: break-all;
+                        width:25%;
+                        i{
+                            margin-left:10px;
+                        }
+                    }
+                    &:nth-child(4){
+                        width:5%;
+                        padding:7px 10px;
+                        text-align:center;
+                        input{
+                            width:40px;
+                            outline:none;
+                            border: 1px solid #ccc;
+                            &:focus{
+                                outline:none;
+                            }
+                        }
+                    }
+                    &:nth-child(5){
+                        width:15%;
+                        text-align:right;
+                    }
+                    &:nth-child(6){
+                        width:20%;
+                        padding:5px;
+                        cursor:pointer;
+                        a{
+                            &:nth-child(1){
+                                color:#4bac4d;
+                            }
+                            &:nth-child(2){
+                                color:#4bac4d;
+                            }
+                            float:left;
+                            text-align: center;
+                            display:block;
+                            text-decoration:none;
+                            color:#c51515;
+                            font-size: 10px;
+                            padding: 6px 10px 5px;
+                            width:33%;
+                            &:hover{
+                                text-decoration:none;
+                            }
+                        }
+                        &::after{
+                            display:table;
+                            content:"";
+                            clear:both;
+                        }
+                    }
+                }
+            }
+        }
+        .order-note{
+            background-color:#fff;
+            > div{
+                margin-bottom:5px;
+                padding:20px;
+                width:100%;
+                border:none;
+                color:#252525;
+                display:none;
+            }
+        }
+        .order-bill-arrow{
+            background-color:#fff;
+            padding:30px 0 10px;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                color:#bbb;
+                i{
+                    margin-right: 7px;
+                    font-size: 16px;
+                    vertical-align:middle;
+                }
+            }
+        }
+    }
+    .order-bill{
+        > table{
+            width:100%;
+            margin-top:10px;
+            tr{
+                background-color:#fff;
+                &:nth-child(1){
+                    background-color:#dcdcdc !important;
+                    td{
+                        font-weight:bold;
+                        color:#484848;
+                        &:nth-child(2){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(3){
+                            border-right:1px solid #eaeaea;
+                        }
+                        &:nth-child(4){
+                            border-right:1px solid #eaeaea;
+                            padding: 10px !important;
+                        }
+                        &:nth-child(5){
+                            text-align:center;
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    background-color:#f9f9f9;
+                }
+                td{
+                    padding: 10px;
+                    &:nth-child(2){
+                        width:55%;
+                        i{
+                            margin-left:10px;
+                        }
+                    }
+                    &:nth-child(3){
+                        width:5%;
+                        padding:7px 10px;
+                        input{
+                            width:40px;
+                            outline:none;
+                            border: 1px solid #ccc;
+                            &:focus{
+                                outline:none;
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        width:30%;
+                        text-align:right;
+                    }
+                    &:nth-child(5){
+                        width:10%;
+                        padding:5px;
+                        cursor:pointer;
+                        a{
+                            text-align: center;
+                            display:block;
+                            text-decoration:none;
+                            color:#c51515;
+                            font-size: 10px;
+                            padding: 6px 5px 5px;
+                            &:hover{
+                                text-decoration:none;
+                                color:#a91111;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .order-note{
+            background-color:#fff;
+            > div{
+                margin-bottom:5px;
+                display:none;
+                
+                input{
+                    padding:20px;
+                    width:100%;
+                    border:none;
+                    color:#8a8a8a;
+                    &:focus{
+                        outline:none;
+                    }
+                }
+            }
+        }
+        .order-bill-arrow{
+            background-color:#fff;
+            padding:30px 0 10px;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                color:#bbb;
+                i{
+                    margin-right: 7px;
+                    font-size: 16px;
+                    vertical-align:middle;
+                }
+            }
+        }
+    }
+    .order-add{
+        background-color:#fff;
+        margin-top:10px;
+        h5{
+            padding:10px 20px;
+            margin:0;
+            font-size:15px;
+            a{
+                text-decoration:none;
+                color:#696969;
+                &:hover{
+                    text-decoration:none;
+                    color:#277ce6;
+                }
+                i{
+                    margin-right:5px;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+    .order-total-money{
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px 0;
+            p{
+                text-align:center;
+                margin-bottom:0;
+                font-size:16px;
+                font-weight:bold;
+            }
+        }
+        > span{
+            position:absolute;
+            font-weight:bold;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+        }
+    }
+    .order-money-sales-money{
+        width:50%;
+        float:left;
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            top:-3px;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            input{
+                width:70px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .order-money-sale-percent{
+        float:left;
+        width:50%;
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            top:-3px;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            input{
+                width:70px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .order-money-surcharge{
+        float:left;
+        width:50%;
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            top:-3px;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            input{
+                width:70px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .order-after-money{
+        float:left;
+        width:50%;
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+                font-weight:bold;
+            }
+        }
+        > span{
+            position:absolute;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            font-weight:bold;
+            input{
+                width:70px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .order-money-receive{
+        width:50%;
+        float:left;
+        background-color:#fff;
+        position:relative;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            top:-3px;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+            input{
+                width:70px;
+                &:focus{
+                    outline:none;
+                }
+            }
+        }
+    }
+    .order-money-change{
+        background-color:#fff;
+        position:relative;
+        width:50%;
+        float:left;
+        > div{
+            padding:10px;
+            p{
+                margin-bottom:0;
+                font-size:16px;
+/*                font-weight:bold;*/
+            }
+        }
+        > span{
+            position:absolute;
+            font-weight:bold;
+            top:0;
+            right:0;
+            display: block;
+            padding: 10px;
+            font-size:15px;
+        }
+    }
+    .order-bill-option{
+        margin-top:10px;
+        .order-bill-send{
+            float:left;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#3377a2;
+                    color:#fff;
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#3377a2;
+                }
+            }
+            button{
+                border:none;
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#3377a2;
+                    color:#fff;
+                    i{
+                        color:#fff;
+                    }
+                }
+                &:focus{
+                    outline:none;
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#3377a2;
+                }
+            }
+        }
+        .order-bill-cancel{
+            float:right;
+            margin-right:10px;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#c51515;
+                    color:#fff;
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#c51515;
+                }
+            }
+        }
+        .order-bill-save{
+            float:right;
+            margin-right:10px;
+            button{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 20px;
+                background-color: #fff;
+                font-size:15px;
+                border:none;
+                color:#616161;
+                &:focus{
+                    outline:none;
+                }
+                &:hover{
+                    text-decoration:none;
+                    background-color:#4bac4d;
+                    color:#fff;    
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#4bac4d;
+                }
+            }
+        }
+        .order-bill-save-add{
+            float:right;
+            a{
+                text-decoration:none;
+                display:block;
+                text-align:center;
+                padding: 10px 15px;
+                background-color: #fff;
+                font-size:15px;
+                color:#616161;
+                &:hover{
+                    text-decoration:none;
+                    background-color:#4bac4d;
+                    color:#fff;    
+                    i{
+                        color:#fff;
+                    }
+                }
+                i{
+                    display:block;
+                    font-size:20px;
+                    margin-bottom:5px;
+                    color:#4bac4d;
+                }
+            }
+        }
+        &::after{
+            display:table;
+            content:"";
+            clear:both;
+        }
+    }
+}
+
+@media (min-width:480px){
+    .order-table{
+        .order-table-header{
+            .order-table-number{
+                > p{
+
+                }
+            }
+/*            .order-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }*/
+            .order-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-info{
+            div{
+                input{
+
+                }
+                button{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-bill-avalaible{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-add{
+            h5{
+
+            }
+        }
+        .order-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .order-bill-option{
+            .order-bill-send{
+                button{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-cancel{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save-add{
+                a{
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .order-table{
+        padding-left:5px;
+        padding-right:10px;
+        margin-top:0;
+        padding-bottom:0;
+        position:relative;
+        width:50%;
+        .order-table-header{
+            .order-table-number{
+                > p{
+
+                }
+            }
+/*            .order-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }*/
+            .order-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-info{
+            div{
+                input{
+
+                }
+                button{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-bill-avalaible{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-add{
+            h5{
+
+            }
+        }
+        .order-money-sales-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:60px;
+                }
+            }
+        }
+        .order-money-sale-percent{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:60px;
+                }
+            }
+        }
+        .order-money-surcharge{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:60px;
+                }
+            }
+        }
+        .order-after-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:60px;
+                }
+            }
+        }
+        .order-money-receive{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:60px;
+                }
+            }
+        }
+        .order-money-change{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    
+                }
+            }
+        }
+        .order-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .order-bill-option{
+            .order-bill-send{
+                button{
+                    padding: 10px 15px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-cancel{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save-add{
+                a{
+                    padding: 10px 10px;
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .order-table{
+        padding-left:5px;
+        padding-right:15px;
+        .order-table-header{
+            .order-table-number{
+                > p{
+
+                }
+            }
+/*            .order-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }*/
+            .order-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-info{
+            div{
+                input{
+
+                }
+                button{
+                    > i{
+
+                    }
+                }
+            }
+            .form-group{
+                margin-bottom: 2px;
+                width: 50%;
+                float: left;
+                > label{
+                    padding-left:20px;
+                    padding-right:0;
+                    padding-bottom: 5px;
+                }
+                > div{
+                    padding-left:20px;
+                    padding-right:0;
+                    padding-top:0;
+                }
+                label{
+                    
+                }
+                input{
+
+                }
+                select{
+
+                }
+                texarea{
+
+                }
+            }
+        }
+        .order-bill-avalaible{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-add{
+            h5{
+
+            }
+        }
+        .order-money-sales-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:70px;
+                }
+            }
+        }
+        .order-money-sale-percent{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:70px;
+                }
+            }
+        }
+        .order-money-surcharge{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:70px;
+                }
+            }
+        }
+        .order-after-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:70px;
+                }
+            }
+        }
+        .order-money-receive{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:70px;
+                }
+            }
+        }
+        .order-money-change{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    
+                }
+            }
+        }
+        .order-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .order-bill-option{
+            .order-bill-send{
+                button{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-cancel{
+                a{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save{
+                a{
+                    padding: 10px 20px;
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save-add{
+                a{
+                    padding: 10px 15px;
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .order-table{
+        .order-table-header{
+            .order-table-number{
+                > p{
+
+                }
+            }
+/*            .order-table-search{
+                > button{
+                    i{
+
+                    }
+                }
+            }*/
+            .order-table-visitor{
+                > p{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-info{
+            div{
+                input{
+
+                }
+                button{
+                    > i{
+
+                    }
+                }
+            }
+        }
+        .order-bill-avalaible{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-bill{
+            > table{
+                tr{
+                    td{
+
+                    }
+                }
+            }
+            .order-bill-arrow{
+                p{
+
+                }
+                img{
+
+                }
+            }
+        }
+        .order-add{
+            h5{
+
+            }
+        }
+        .order-money-sales-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:100px;
+                }
+            }
+        }
+        .order-money-sale-percent{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:100px;
+                }
+            }
+        }
+        .order-money-surcharge{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:100px;
+                }
+            }
+        }
+        .order-after-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:100px;
+                }
+            }
+        }
+        .order-money-receive{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    width:100px;
+                }
+            }
+        }
+        .order-money-change{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+                input{
+                    
+                }
+            }
+        }
+        .order-total-money{
+            > div{
+                p{
+
+                }
+            }
+            > span{
+
+            }
+        }
+        .order-bill-option{
+            .order-bill-send{
+                button{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-cancel{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save{
+                a{
+                    i{
+
+                    }
+                }
+            }
+            .order-bill-save-add{
+                a{
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}

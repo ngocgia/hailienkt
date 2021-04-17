@@ -1,0 +1,638 @@
+.search{
+    margin-bottom:10px;
+    padding:0;
+    position:relative;
+    z-index:51;
+    > div.main-header-search{
+        position:relative;
+        float:left;
+        margin-left:5px;
+        z-index: 51;
+        > a.main-button-search{
+            display:block;
+            color:#fff;
+            background-color:#3b637d;
+            padding:6px 12px;
+            font-size:14px;
+            cursor:pointer;
+            text-decoration:none;
+            i:first-of-type{
+                margin-right:7px;
+            }
+            i.fa-angle-down{
+                margin-left:7px;
+            }
+            &:hover{
+                text-decoration:none;
+                background-color:#375b73;
+            }
+        }
+        > div.main-search-box{
+            position:absolute;
+            top:100%;
+            right:0;
+            background-color:#3b637d;
+            display:none;
+            > ul{
+                padding:5px 0;
+                > li{
+                    position:relative;
+                    > a{
+                        display:block;
+                        color:#fff;
+                        padding: 10px 12px;
+                        white-space: nowrap;
+                        cursor:pointer;
+                        text-decoration:none;
+                        &:hover{
+                            text-decoration:none;
+                            background-color:#375b73;
+                        }
+                        i{
+                            margin-right:7px;
+                        }
+                    }
+                    > ul.show{
+                        opacity:1;
+                        right:100%;
+                        position:absolute;
+                        visibility: visible;
+                        display:block;
+                    }
+                    > ul{
+                        position:absolute;
+                        right:120%;
+                        top:0;
+                        background-color:#3b637d;
+                        opacity:0;
+                        transition:right 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
+                        visibility: hidden;
+                        display:block;
+                        > li{
+                            position:relative;
+                            > a{
+                                display:block;
+                                color:#fff;
+                                padding: 10px 12px;
+                                white-space: nowrap;
+                                cursor:pointer;
+                                text-decoration:none;
+                                &:hover{
+                                    text-decoration:none;
+                                    background-color:#375b73;
+                                }
+                                i{
+                                    margin-right:7px;
+                                }
+                            }
+                            > ul.show{
+                                opacity:1;
+                                right:100%;
+                                position:absolute;
+                                visibility: visible;
+                                display:block;
+                            }
+                            > ul{
+                                position:absolute;
+                                right:120%;
+                                top:0;
+                                background-color:#3b637d;
+                                opacity:0;
+                                transition:right 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
+                                visibility: hidden;
+                                display:block;
+                                > li{
+                                    position:relative;
+                                    > a{
+                                        display:block;
+                                        color:#fff;
+                                        padding: 10px 12px;
+                                        white-space: nowrap;
+                                        cursor:pointer;
+                                        text-decoration:none;
+                                        &:hover{
+                                            text-decoration:none;
+                                            background-color:#375b73;
+                                        }
+                                        i{
+                                            margin-right:7px;
+                                        }
+                                    }
+                                    > ul.show{
+                                        opacity:1;
+                                        right:100%;
+                                        position:absolute;
+                                        visibility: visible;
+                                        display:block;
+                                    }
+                                    > ul{
+                                        position:absolute;
+                                        right:120%;
+                                        top:0;
+                                        background-color:#3b637d;
+                                        opacity:0;
+                                        transition:right 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
+                                        visibility: hidden;
+                                        display:block;
+                                        > li{
+                                            position:relative;
+                                            > a{
+                                                display:block;
+                                                color:#fff;
+                                                padding: 10px 12px;
+                                                white-space: nowrap;
+                                                cursor:pointer;
+                                                text-decoration:none;
+                                                &:hover{
+                                                    text-decoration:none;
+                                                    background-color:#375b73;
+                                                }
+                                                i{
+                                                    margin-right:7px;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.inner-search{
+        float:left;
+        form{
+            input{
+                width:187px;
+                outline:none;
+                background:#fff;
+                color:#000;
+                padding:5px 10px 5px;
+                float:left;
+                border:1px solid #3b637d;
+                border-radius:0 !important;
+                transition:width 0.2s;
+                &:focus{
+                    border:1px solid #3b637d;
+                    outline:none;
+                }
+            }
+            select{
+                width:187px;
+                outline:none;
+                background:#fff;
+                color:#000;
+                padding:5px 10px 5px;
+                float:left;
+                border:1px solid #3b637d;
+                border-radius:0 !important;
+                transition:width 0.2s;
+                &:focus{
+                    border:1px solid #3b637d;
+                    outline:none;
+                }
+            }
+            i{
+                font-size:18px;
+                line-height:20px;
+                background-color:#3b637d;
+                border-radius:0;
+                padding:4px 9px 4px;
+                border:1px solid #3b637d;
+                color:#fff;
+            }
+            button{
+                background:none;
+                outline:none;
+                border:none;
+                padding:0;
+                &:focus{
+                    outline:none;
+                    border:none;
+                }
+            }
+            &::after{
+                display:table;
+                content:"";
+                clear:both;
+            }
+        }
+    }
+    &::after{
+        display:table;
+        content:"";
+        clear:both;
+    }
+}
+
+@media (min-width:480px){
+    .search{
+        > div.main-header-search{
+            > a.main-button-search{
+                i:first-of-type{
+
+                }
+                i.fa-angle-down{
+
+                }
+                &:hover{
+
+                }
+            }
+            > div.main-search-box{
+                > ul{
+                    > li{
+                        > a{
+                            &:hover{
+
+                            }
+                            i{
+
+                            }
+                        }
+                        > ul.show{
+
+                        }
+                        > ul{
+                            > li{
+                                > a{
+                                    &:hover{
+
+                                    }
+                                    i{
+
+                                    }
+                                }
+                                > ul.show{
+
+                                }
+                                > ul{
+                                    > li{
+                                        > a{
+                                            &:hover{
+
+                                            }
+                                            i{
+
+                                            }
+                                        }
+                                        > ul.show{
+
+                                        }
+                                        > ul{
+                                            > li{
+                                                > a{
+                                                    &:hover{
+
+                                                    }
+                                                    i{
+
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div.inner-search{
+            form{
+                input{
+                    &:focus{
+                       
+                    }
+                }
+                select{
+                    &:focus{
+                       
+                    }
+                }
+                i{
+
+                }
+                button{
+                    &:focus{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .search{
+        float:right;
+        margin-bottom:0;
+        padding:0;
+        padding-right: 10px;
+        > div.main-header-search{
+            margin-left: 15px;
+            > a.main-button-search{
+                i:first-of-type{
+
+                }
+                i.fa-angle-down{
+
+                }
+                &:hover{
+
+                }
+            }
+            > div.main-search-box{
+                > ul{
+                    > li{
+                        > a{
+                            &:hover{
+
+                            }
+                            i{
+
+                            }
+                        }
+                        > ul.show{
+
+                        }
+                        > ul{
+                            > li{
+                                > a{
+                                    &:hover{
+
+                                    }
+                                    i{
+
+                                    }
+                                }
+                                > ul.show{
+
+                                }
+                                > ul{
+                                    > li{
+                                        > a{
+                                            &:hover{
+
+                                            }
+                                            i{
+
+                                            }
+                                        }
+                                        > ul.show{
+
+                                        }
+                                        > ul{
+                                            > li{
+                                                > a{
+                                                    &:hover{
+
+                                                    }
+                                                    i{
+
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div.inner-search{
+            form{
+                input{
+                    width:200px;
+                    &:focus{
+                       
+                    }
+                }
+                select{
+                    width:200px;
+                    &:focus{
+                       
+                    }
+                }
+                i{
+
+                }
+                button{
+                    &:focus{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:992px){
+    .search{
+        padding-right: 15px;
+        > div.main-header-search{
+            > a.main-button-search{
+                padding: 7px 12px;
+                font-size:15px;
+                i:first-of-type{
+
+                }
+                i.fa-angle-down{
+
+                }
+                &:hover{
+
+                }
+            }
+            > div.main-search-box{
+                > ul{
+                    > li{
+                        > a{
+                            &:hover{
+
+                            }
+                            i{
+
+                            }
+                        }
+                        > ul.show{
+
+                        }
+                        > ul{
+                            > li{
+                                > a{
+                                    &:hover{
+
+                                    }
+                                    i{
+
+                                    }
+                                }
+                                > ul.show{
+
+                                }
+                                > ul{
+                                    > li{
+                                        > a{
+                                            &:hover{
+
+                                            }
+                                            i{
+
+                                            }
+                                        }
+                                        > ul.show{
+
+                                        }
+                                        > ul{
+                                            > li{
+                                                > a{
+                                                    &:hover{
+
+                                                    }
+                                                    i{
+
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div.inner-search{
+            form{
+                input{
+                    padding:7px 10px 6px;
+                    &:focus{
+                       
+                    }
+                }
+                select{
+                    padding:7px 10px 6px;
+                    &:focus{
+                       
+                    }
+                }
+                i{
+                    padding:6px 9px 5px;
+                }
+                button{
+                    &:focus{
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1200px){
+    .search{
+        > div.main-header-search{
+            > a.main-button-search{
+                i:first-of-type{
+
+                }
+                i.fa-angle-down{
+
+                }
+                &:hover{
+
+                }
+            }
+            > div.main-search-box{
+                > ul{
+                    > li{
+                        > a{
+                            &:hover{
+
+                            }
+                            i{
+
+                            }
+                        }
+                        > ul.show{
+
+                        }
+                        > ul{
+                            > li{
+                                > a{
+                                    &:hover{
+
+                                    }
+                                    i{
+
+                                    }
+                                }
+                                > ul.show{
+
+                                }
+                                > ul{
+                                    > li{
+                                        > a{
+                                            &:hover{
+
+                                            }
+                                            i{
+
+                                            }
+                                        }
+                                        > ul.show{
+
+                                        }
+                                        > ul{
+                                            > li{
+                                                > a{
+                                                    &:hover{
+
+                                                    }
+                                                    i{
+
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div.inner-search{
+            form{
+                input{
+                    &:focus{
+                       
+                    }
+                }
+                select{
+                    &:focus{
+                       
+                    }
+                }
+                i{
+
+                }
+                button{
+                    &:focus{
+
+                    }
+                }
+            }
+        }
+    }
+}
